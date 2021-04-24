@@ -11,6 +11,14 @@ class _BitirState extends State<Bitir> {
     var data = [];
     data = ModalRoute.of(context).settings.arguments;
 
+    String deneme = '';
+
+    if (int.parse(data[1]) >= 70) {
+      deneme = "Tebrikler Ördeksiniz";
+    } else {
+      deneme = "Ördek Değilsiniz";
+    }
+
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 56, 92, 89),
       body: Center(
@@ -22,11 +30,25 @@ class _BitirState extends State<Bitir> {
               width: 400,
               height: 300,
             ),
-            Text('Ördek Misiniz ?', style: TextStyle(fontSize: 60.0)),
-            Text(data[0].toString()),
-            Text(data[1].toString()),
-            Text('Puanınız 70 ve üzeri ise kendinize Ördek diyebilirsiniz',
-                style: TextStyle(fontSize: 30.0)),
+            Padding(padding: const EdgeInsets.all(8.0)),
+            Text(data[0].toString(),
+                style: TextStyle(fontSize: 60.0, fontWeight: FontWeight.bold)),
+            Padding(padding: const EdgeInsets.all(8.0)),
+            Stack(children: <Widget>[
+              Text(
+                deneme,
+                style: TextStyle(
+                  fontSize: 30,
+                  foreground: Paint()
+                    ..style = PaintingStyle.stroke
+                    ..strokeWidth = 3
+                    ..color = Colors.white,
+                ),
+              ),
+              Padding(padding: const EdgeInsets.all(8.0)),
+            ]
+            ),
+            Padding(padding: const EdgeInsets.all(16.0)),
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/');
