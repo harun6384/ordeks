@@ -38,6 +38,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String adSoyad = '';
 
+
   void kontrol() {
     if (adSoyad.length >= 5) {
       var data = [];
@@ -70,14 +71,14 @@ class _MyHomePageState extends State<MyHomePage> {
     }
 
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 56, 92, 89),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Ördek Misiniz ?', style: TextStyle(fontSize: 60.0)),
-            Text(
-              'Ad - Soyad giriniz:',
-            ),
+            Text('Ördek Misiniz ?',
+                style: TextStyle(fontSize: 60.0, color: Colors.white)),
+            Text('Ad - Soyad giriniz:', style: TextStyle(color: Colors.white)),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -96,6 +97,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
+
+
+
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: ElevatedButton(
@@ -103,30 +107,48 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text('Başla'),
               ),
             ),
+
+
+
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16.0),
-              child: ElevatedButton(
+              padding: EdgeInsets.only(left: 0.0, right: 0.0),
+              child: RaisedButton(
+                textColor: Colors.black,
+                color: Colors.amber,
+                child: Text("Ördek Bilgi"),
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => Ordekbilgi()),
                   );
                 },
-                child: Text('Ördek Bilgi'),
+                shape: new RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(30.0),
+                ),
               ),
             ),
+
+
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
-              child: ElevatedButton(
+              child: OutlinedButton.icon(
+                icon: Icon(Icons.star_outline),
+                label: Text("Hakkında", style: TextStyle(color: Colors.white) ),
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => Hakkinda()),
                   );
                 },
-                child: Text('Hakkında'),
+                style: ElevatedButton.styleFrom(
+                  side: BorderSide(width: 2.0, color: Colors.white),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(32.0),
+                  ),
+                ),
               ),
             ),
+
           ],
         ),
       ),

@@ -12,6 +12,7 @@ class _OrdekbilgiState extends State<Ordekbilgi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 56, 92, 89),
       appBar: AppBar(
         title: Text('Ördek Bilgi Sayfası'),
       ),

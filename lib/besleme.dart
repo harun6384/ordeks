@@ -10,6 +10,7 @@ class _BeslemeState extends State<Besleme> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 56, 92, 89),
       appBar: AppBar(
         title: Text('Nasıl Beslenir'),
       ),

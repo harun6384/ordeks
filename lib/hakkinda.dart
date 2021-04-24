@@ -9,6 +9,7 @@ class _HakkindaState extends State<Hakkinda> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 56, 92, 89),
       appBar: AppBar(
         title: Text('Hakkında'),
       ),
@@ -19,18 +20,32 @@ class _HakkindaState extends State<Hakkinda> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text('Ördek Misiniz uygulaması',
-                  style: TextStyle(fontSize: 60.0)),
+                  style: TextStyle(fontSize: 60.0, color: Colors.white)),
               Text(
-                  'Bu uygulama Dr. Öğretim Üyesi Ahmet Cevahir ÇINAR tarafından yürütülen 3301456 kodlu MOBİL PROGRAMLAMA dersi kapsamında 183301032 numaralı Öğrenci Öğrenir tarafından 30 Nisan 2021 günü yapılmıştır.'),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
-                child: ElevatedButton(
+                  'Bu uygulama Dr. Öğretim Üyesi Ahmet Cevahir ÇINAR tarafından yürütülen 3301456 kodlu MOBİL PROGRAMLAMA dersi kapsamında 183301032 numaralı Öğrenci Öğrenir tarafından 30 Nisan 2021 günü yapılmıştır.',
+                  style: TextStyle(color: Colors.white)),
+
+              ButtonTheme(
+                minWidth: 200.0,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.green)),
+                child: RaisedButton(
+                  elevation: 5.0,
+                  hoverColor: Colors.green,
+                  color: Colors.amber,
+                  child: Text(
+                    "Ana Sayfaya Dön",
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
                   onPressed: () {
                     Navigator.pushNamed(context, '/');
                   },
-                  child: Text('Ana sayfaya Dön'),
                 ),
               ),
+
+
             ],
           ),
         ),

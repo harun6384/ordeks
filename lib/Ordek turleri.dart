@@ -10,6 +10,7 @@ class _OrdekturleriState extends State<Ordekturleri> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 56, 92, 89),
       appBar: AppBar(
         title: Text('Ördek Türleri'),
       ),

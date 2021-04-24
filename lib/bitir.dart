@@ -12,6 +12,7 @@ class _BitirState extends State<Bitir> {
     data = ModalRoute.of(context).settings.arguments;
 
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 56, 92, 89),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

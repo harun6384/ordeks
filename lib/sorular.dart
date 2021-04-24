@@ -115,6 +115,7 @@ class _SorularState extends State<Sorular> {
     }
 
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 56, 92, 89),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
