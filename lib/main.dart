@@ -38,7 +38,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String adSoyad = '';
 
-
   void kontrol() {
     if (adSoyad.length >= 5) {
       var data = [];
@@ -97,9 +96,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-
-
-
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: ElevatedButton(
@@ -107,9 +103,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text('Başla'),
               ),
             ),
-
-
-
             Padding(
               padding: EdgeInsets.only(left: 0.0, right: 0.0),
               child: RaisedButton(
@@ -127,13 +120,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-
-
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: OutlinedButton.icon(
                 icon: Icon(Icons.star_outline),
-                label: Text("Hakkında", style: TextStyle(color: Colors.white) ),
+                label: Text("Hakkında", style: TextStyle(color: Colors.white)),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -148,7 +139,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-
           ],
         ),
       ),

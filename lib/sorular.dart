@@ -103,14 +103,11 @@ class _SorularState extends State<Sorular> {
     }
   }
 
-
   @override
   Widget build(BuildContext context) {
     var data = [];
     data = ModalRoute.of(context).settings.arguments;
     adSoyad = data[0];
-
-
 
     List cevaplistesi = [];
     for (var u in sorular[mevcutsoru]['cevaplar']) {
@@ -132,7 +129,6 @@ class _SorularState extends State<Sorular> {
                   sorular.length.toString(),
               style: TextStyle(fontSize: 12),
             ),
-
             Text(
               sorular[mevcutsoru]['soru'].toString(),
               style: TextStyle(fontSize: 32),

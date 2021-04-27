@@ -46,8 +46,7 @@ class _BitirState extends State<Bitir> {
                 ),
               ),
               Padding(padding: const EdgeInsets.all(8.0)),
-            ]
-            ),
+            ]),
             Padding(padding: const EdgeInsets.all(16.0)),
             ElevatedButton(
               onPressed: () {

@@ -65,9 +65,7 @@ class _OrdekfotolariState extends State<Ordekfotolari> {
                         );
                       },
                       child: Text('Öcü var tıklama'),
-
                     ),
-
                   ),
                   Padding(padding: EdgeInsets.all(10)),
                 ],
