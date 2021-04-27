@@ -22,7 +22,7 @@ class _HakkindaState extends State<Hakkinda> {
               Text('Ördek Misiniz uygulaması',
                   style: TextStyle(fontSize: 60.0, color: Colors.white)),
               Text(
-                  'Bu uygulama Dr. Öğretim Üyesi Ahmet Cevahir ÇINAR tarafından yürütülen 3301456 kodlu MOBİL PROGRAMLAMA dersi kapsamında 183301032 numaralı Öğrenci Öğrenir tarafından 30 Nisan 2021 günü yapılmıştır.',
+                  'Bu uygulama Dr. Öğretim Üyesi Ahmet Cevahir ÇINAR tarafından yürütülen 3301456 kodlu MOBİL PROGRAMLAMA dersi kapsamında 183301032 numaralı Abdullah Harun Taşdelen tarafından 30 Nisan 2021 günü yapılmıştır.',
                   style: TextStyle(color: Colors.white)),
 
               ButtonTheme(
