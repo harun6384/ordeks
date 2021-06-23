@@ -2,6 +2,7 @@ import 'package:deneme2/Ordek%20turleri.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:deneme2/besleme.dart';
+import 'package:deneme2/graphic/graphic.dart';
 
 class Ordekbilgi extends StatefulWidget {
   @override
@@ -23,19 +24,19 @@ class _OrdekbilgiState extends State<Ordekbilgi> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text('Ordekler hakkinda bilgi', style: TextStyle(fontSize: 40.0)),
-              Padding(padding: const EdgeInsets.symmetric(vertical: 16.0)),
+              Padding(padding: const EdgeInsets.symmetric(vertical: 8.0)),
               Text(
                   'Ördek, (Anatinae) alt familyasından hemen hemen bütün dünyanın sulak bölgelerinde yaşayan, perde ayaklı su kuşlarına verilen ad. Göl ve bataklık kenarlarını pek severler. Hızlı akan nehir ve denizlerde yaşayanlar da vardır. Beslenmesi kolay olduğundan, evcil birçok soyları üretilmiştir.'),
-              Padding(padding: const EdgeInsets.symmetric(vertical: 8.0)),
+              Padding(padding: const EdgeInsets.symmetric(vertical: 4.0)),
               Text(
                   'Yassı gaga, perdeli ayaklar, badi badi bir yürüyüş ve vak vak gibilerden bir ses, ördeklerin belli başlı özellikleridir.'),
-              Padding(padding: const EdgeInsets.symmetric(vertical: 8.0)),
+              Padding(padding: const EdgeInsets.symmetric(vertical: 4.0)),
               Text(
                   'Kısa ayakları vücudunun arka kısmında oduğundan, yürürken zorluk çekerler. Erkekler dişilerden daha büyük ve gösterişlidir. Kışın ve ilkbaharda semirdiklerinden etleri lezzetli olur.'),
-              Padding(padding: const EdgeInsets.symmetric(vertical: 8.0)),
+              Padding(padding: const EdgeInsets.symmetric(vertical: 4.0)),
               Text('5-10 yıl ömürleri vardır.'),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -47,7 +48,7 @@ class _OrdekbilgiState extends State<Ordekbilgi> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -56,6 +57,25 @@ class _OrdekbilgiState extends State<Ordekbilgi> {
                     );
                   },
                   child: Text('Nasil beslenir'),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: OutlinedButton.icon(
+                  icon: Icon(Icons.star_outline),
+                  label: Text("Grafik", style: TextStyle(color: Colors.white)),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LineChartSample1()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    side: BorderSide(width: 2.0, color: Colors.white),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32.0),
+                    ),
+                  ),
                 ),
               ),
             ],

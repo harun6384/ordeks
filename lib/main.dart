@@ -1,9 +1,12 @@
+
 import 'package:deneme2/ordekbilgi.dart';
 import 'package:deneme2/sorular.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:deneme2/bitir.dart';
 import 'package:deneme2/hakkinda.dart';
+
+
 
 void main() {
   runApp(MyApp());
@@ -139,6 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
+
           ],
         ),
       ),

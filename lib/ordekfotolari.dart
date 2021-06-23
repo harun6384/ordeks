@@ -15,11 +15,36 @@ class _OrdekfotolariState extends State<Ordekfotolari> {
         title: Text('Fotoğraflar'),
       ),
       body: Center(
+        child: GestureDetector(
+          onTapUp: (e) {
+            ScaffoldMessenger.of(context).showSnackBar(new SnackBar(
+                content:
+                new Text("Vak")));
+          },
+          onLongPress: () {
+            ScaffoldMessenger.of(context).showSnackBar(
+                new SnackBar(content: new Text('vak vak')));
+          },
+          onTapCancel: () {
+            ScaffoldMessenger.of(context).showSnackBar(new SnackBar(
+                content: new Text("VAK VAK VAK")));
+          },
+
+
         child: Container(
           child: SingleChildScrollView(
             child: SafeArea(
               child: Column(
                 children: <Widget>[
+
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+
+                        child: new Text('Sevmek için tıkla', style: TextStyle(fontSize: 40.0)),
+
+                      ),
+
+
                   Image.asset(
                     'assets/images/cinordegi.jpg',
                     width: 300,
@@ -74,6 +99,7 @@ class _OrdekfotolariState extends State<Ordekfotolari> {
           ),
         ),
       ),
-    );
+      ),
+            );
   }
 }

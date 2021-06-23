@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:deneme2/file_op/file_operations.dart';
+import 'package:deneme2/file_op//file_download_view.dart';
 
 class Trordekleri extends StatefulWidget {
   @override
@@ -59,6 +61,18 @@ class _TrordekleriState extends State<Trordekleri> {
                   Text('ÇAMURCUN'),
                 ],
               ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => FileOperationsScreen()));
+                  },
+                  child: Text("Ördek İsimlendirme")),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => FileDownloadView()));
+                  },
+                  child: Text("Rastgele Bilgi ve Video")),
             ],
           ),
         ),
